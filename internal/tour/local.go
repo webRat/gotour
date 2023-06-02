@@ -39,6 +39,9 @@ func Main() {
 
 	flag.Parse()
 
+	log.Printf("httpListen : %s", *httpListen)
+	log.Printf("openbrowser: %v", *openBrowser)
+
 	host, port, err := net.SplitHostPort(*httpListen)
 	if err != nil {
 		log.Fatal(err)
